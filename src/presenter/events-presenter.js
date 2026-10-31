@@ -1,22 +1,21 @@
 import { render } from '../render';
 import EventsListView from '../view/events-list-view';
 import EventItemView from '../view/event-item-view';
-import AddFormView from '../view/add-form-view';
 import EditFormView from '../view/edit-form-view';
 import MessageView from '../view/message-view';
 
-const EVENT_COUNT = 3;
 const eventsElement = document.querySelector('.trip-events');
 
 export default class TripEventsPresenter {
   eventsListComponent = new EventsListView();
   eventsListElement = this.eventsListComponent.getElement();
-  addFormComponent = new AddFormView();
-  editFormComponent = new EditFormView();
+  addFormComponent = new EditFormView({ isEdit: false });
+  editFormComponent = new EditFormView({ isEdit: true });
   messageComponent = new MessageView();
 
-  constructor({ eventsContainer }) {
+  constructor({ eventsContainer, tripModel }) {
     this.eventsContainer = eventsContainer;
+    this.tripModel = tripModel;
   }
 
   init() {
@@ -24,8 +23,13 @@ export default class TripEventsPresenter {
     render(this.addFormComponent, this.eventsListElement);
     render(this.eventsListComponent, this.eventsContainer);
 
-    for (let i = 0; i < EVENT_COUNT; i++) {
-      const eventItemComponent = new EventItemView();
+    for (let i = 0; i < this.tripModel.points.length; i++) {
+      const point = this.tripModel.points[i];
+      const eventItemComponent = new EventItemView({
+        point: point,
+        offers: this.tripModel.getOffersById(point.type, point.offers),
+        destination: this.tripModel.getDestinationById(point.destination),
+      });
       render(eventItemComponent, this.eventsListElement);
     }
 
