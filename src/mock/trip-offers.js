@@ -27,6 +27,11 @@ export const tripOffers = [
         title: 'Open the door before and after',
         price: getRandomInteger(MIN_PRICE, MAX_PRICE),
       },
+      {
+        id: 'b4c3e4e6-9053-42ce-b747-e281314baa34',
+        title: 'Modern sights mostly',
+        price: getRandomInteger(MIN_PRICE, MAX_PRICE),
+      },
     ],
   },
   {

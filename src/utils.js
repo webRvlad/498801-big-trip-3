@@ -1,3 +1,7 @@
+import dayjs from 'dayjs';
+import durationPlugin from 'dayjs/plugin/duration';
+dayjs.extend(durationPlugin);
+
 // Генерация случайного числа от a до b (включая a и b)
 const getRandomInteger = (a, b) => {
   const lower = Math.ceil(Math.min(a, b));
@@ -15,4 +19,18 @@ const getElementById = (idNumber, elements) => {
   return element ? element : '';
 };
 
-export { getRandomArrayElement, getRandomInteger, getElementById };
+const humanizeDueDate = (dueDate, format) => (dueDate ? dayjs(dueDate).format(format) : '');
+
+const getDuration = (start, end) => {
+  const duration = dayjs.duration(dayjs(end).diff(dayjs(start)));
+  if (duration.days()) {
+    return duration.format('DD[d] HH[h] mm[m]');
+  }
+  if (duration.hours()) {
+    return duration.format('HH[h] mm[m]');
+  }
+
+  return duration.format('mm[m]');
+};
+
+export { getRandomArrayElement, getRandomInteger, getElementById, humanizeDueDate, getDuration };
