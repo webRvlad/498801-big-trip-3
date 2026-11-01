@@ -18,6 +18,10 @@ const tripDestinations = [
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),
       },
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
     ],
   },
   {
@@ -25,10 +29,6 @@ const tripDestinations = [
     description: getRandomArrayElement(DESCRIPTIONS),
     name: getRandomArrayElement(CITIES),
     pictures: [
-      {
-        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
-        description: getRandomArrayElement(DESCRIPTIONS),
-      },
       {
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),
@@ -48,6 +48,10 @@ const tripDestinations = [
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),
       },
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
     ],
   },
   {
@@ -55,6 +59,14 @@ const tripDestinations = [
     description: getRandomArrayElement(DESCRIPTIONS),
     name: getRandomArrayElement(CITIES),
     pictures: [
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
       {
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),
@@ -85,6 +97,10 @@ const tripDestinations = [
     description: getRandomArrayElement(DESCRIPTIONS),
     name: getRandomArrayElement(CITIES),
     pictures: [
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
       {
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),
@@ -145,6 +161,14 @@ const tripDestinations = [
     description: getRandomArrayElement(DESCRIPTIONS),
     name: getRandomArrayElement(CITIES),
     pictures: [
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
+      {
+        src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
+        description: getRandomArrayElement(DESCRIPTIONS),
+      },
       {
         src: `https://24.objects.htmlacademy.pro/static/destinations/${getRandomInteger(MIN_NUMBER, MAX_NUMBER)}.jpg`,
         description: getRandomArrayElement(DESCRIPTIONS),

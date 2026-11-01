@@ -68,7 +68,6 @@ export default class EventItemView {
   }
 
   getTemplate() {
-    console.log(this.state);
     return createEventItemTemplate(this.state);
   }
 

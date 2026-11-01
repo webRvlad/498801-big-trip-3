@@ -9,21 +9,27 @@ const eventsElement = document.querySelector('.trip-events');
 export default class TripEventsPresenter {
   eventsListComponent = new EventsListView();
   eventsListElement = this.eventsListComponent.getElement();
-  addFormComponent = new EditFormView({ isEdit: false });
-  editFormComponent = new EditFormView({ isEdit: true });
   messageComponent = new MessageView();
 
   constructor({ eventsContainer, tripModel }) {
     this.eventsContainer = eventsContainer;
     this.tripModel = tripModel;
+    //this.addFormComponent = new EditFormView({ point: this.tripModel.points[0] });
+    this.editFormComponent = new EditFormView({
+      point: this.tripModel.points[0],
+      destination: this.tripModel.getDestinationById(this.tripModel.points[0].destination),
+      destinationsAll: this.tripModel.destinations,
+      offers: this.tripModel.offers,
+      offersType: this.tripModel.getOffersByType(this.tripModel.points[0].type),
+    });
   }
 
   init() {
     render(this.editFormComponent, this.eventsListElement);
-    render(this.addFormComponent, this.eventsListElement);
+    //render(this.addFormComponent, this.eventsListElement);
     render(this.eventsListComponent, this.eventsContainer);
 
-    for (let i = 0; i < this.tripModel.points.length; i++) {
+    for (let i = 1; i < this.tripModel.points.length; i++) {
       const point = this.tripModel.points[i];
       const eventItemComponent = new EventItemView({
         point: point,

@@ -12,7 +12,7 @@ const tripPoints = [
     dateTo: '2026-10-31T15:55:56.845Z',
     destination: 'bfa5cb75-a1fe-4b77-a83c-0e528e910e01',
     isFavorite: Boolean(getRandomInteger(0, 1)),
-    offers: ['b4c3e4e6-9053-42ce-b747-e281314baa31'],
+    offers: ['b4c3e4e6-9053-42ce-b747-e281314baa31', 'b4c3e4e6-9053-42ce-b747-e281314baa34'],
     type: getRandomArrayElement(EVENT_TYPES),
   },
   {
